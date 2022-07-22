@@ -1,0 +1,106 @@
+# CustomCobbleGen! Version: 1.4.5 By phil14052
+debug: false
+options:
+  playerSearchRadius: 4.0
+  auto-save:
+    enabled: false
+    delay-in-sec: 300
+  money:
+    format: true
+  gui:
+    permissionNeeded: false
+    showBarrierBlockIfLocked: true
+    hideInfoIfLocked: false
+    confirmpurchases: true
+    admingui: true
+    seperateClassesByLines: true
+    centerTiers: true
+    showSupportedModes: true
+  signs:
+    enabled: true
+  islands:
+    usePerIslandUnlockedGenerators: false
+    sendMessagesToTeam: true
+    onlyOwnerCan:
+      buy: false
+      select: false
+    useIslandBalance: false
+  automation:
+    pistons: false
+  supportWaterloggedBlocks: true
+  saveOnTierPurchase: true
+  removeGravity: false
+  disabled:
+    worlds:
+    - world_the_end
+  generationModes:
+    '0':
+      blocks:
+      - WATER
+      - LAVA
+      displayName: Cobblestone generator
+      fallback: COBBLESTONE
+      particleEffect: SMOKE_LARGE
+      generationSound: ENTITY_EXPERIENCE_ORB_PICKUP
+tiers:
+  default:
+    '0':
+      name: Default
+      icon: COBBLESTONE
+      price:
+        money: 0
+      contains:
+        COBBLESTONE: 70
+        COAL_ORE: 10
+        IRON_ORE: 10
+        GOLD_ORE: 10
+    '1':
+      name: Basic
+      icon: COAL_BLOCK
+      price:
+        money: 1000
+      contains:
+        COBBLESTONE: 70
+        COAL_ORE: 20
+        IRON_ORE: 10
+    '2':
+      name: Advanced
+      icon: IRON_BLOCK
+      price:
+        money: 2000
+        items:
+          COBBLESTONE: 64
+      contains:
+        COBBLESTONE: 50
+        COAL_ORE: 30
+        IRON_ORE: 20
+  vip:
+    '0':
+      name: Basic VIP
+      icon: COBBLESTONE
+      price:
+        money: 0
+        xp: 5
+      contains:
+        COBBLESTONE: 90
+        COAL_ORE: 5
+        IRON_ORE: 5
+    '1':
+      name: Advanced VIP
+      icon: COAL_BLOCK
+      price:
+        money: 500
+      contains:
+        COBBLESTONE: 60
+        COAL_ORE: 20
+        IRON_ORE: 20
+    '2':
+      name: Pro VIP
+      icon: IRON_BLOCK
+      price:
+        money: 1000
+      contains:
+        COBBLESTONE: 25
+        COAL_ORE: 35
+        IRON_ORE: 30
+        DIAMOND_ORE: 10

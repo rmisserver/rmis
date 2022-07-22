@@ -1,0 +1,307 @@
+# CustomCobbleGen! Version: 1.4.5 By Phil14052
+prefix: '&8[&3CustomCobbleGen&8]'
+invalid-args: '&cInvalid args!'
+player-only: '&cSorry but that can only be run by a player!'
+player-offline: '&cThat player is not online!'
+undifined-class: '&cThat class is not defined!'
+undifined-level: '&cThat level is not defined!'
+no-tier-selected:
+  self: '&cYou have not selected a tier yet'
+  other: '&c%player_name% has not selected a tier yet'
+show-tier:
+  self: You have currently selected level %selected_tier_level% in %selected_tier_class%
+    class
+  other: '%player_name% has currently selected level %selected_tier_level% in %selected_tier_class%
+    class'
+tier-change-success: '&aSuccessfully changed %player_name% tier to %selected_tier_class%
+  %selected_tier_level%'
+no-permissions: '&cYou don''t have permission for that!'
+reload-success: '&aReloaded the plugin in %time% seconds.'
+force-save-success: '&aSuccessfully force saved the player data'
+player:
+  plugin-help:
+  - '&8&l&m---------------------'
+  - ' '
+  - '&3CustomCobbleGen - &8Help'
+  - '&3/%command%&8 - Show the GUI'
+  - '&3/%command% help&8 - Shows the help menu'
+  - '&3/%command% tier&8 - Shows the currently selected tier'
+  - '&3/%command% upgrade&8 - Upgrade to the next tier'
+  - '&3/%command% admin&8 - Shows list of admin commands'
+  - '&8&l&m---------------------'
+  has-no-island: '&cCreate a island to control generators'
+gui:
+  prefix: '&3&lCustomCobbleGen menu'
+  main:
+    buy: '&aClick to buy'
+    buy-leader-only: '&cOnly leaders of the island can buy'
+    can-not-afford: '&cCan''t afford'
+    selected: '&aSelected'
+    select: '&aClick to select'
+    select-leader-only: '&cOnly leaders of the island can select'
+  locked:
+    missing-permission: '&cLocked - Missing permissions'
+    prev-unowned: '&cLocked - Buy the previous level first'
+  price:
+    money:
+      afford: '&a$%tier_price_money%'
+      expensive: '&c$%tier_price_money%'
+    xp:
+      afford: '&a%tier_price_xp% exp levels'
+      expensive: '&c%tier_price_xp% exp levels'
+    level:
+      achieved: '&aLevel %tier_price_level% island required'
+      not-achieved: '&cLevel %tier_price_level% island required'
+    items:
+      top:
+        afford: '&aItems needed:'
+        expensive: '&cItems needed:'
+      list:
+        afford: '&a%s1 x %s2'
+        expensive: '&c%s1 x %s2'
+  item:
+    name: '&6&l%tier_name%'
+    lore:
+      title: '&8&lThis tier will give the following results'
+      result: '&8%result_name%: &o%result_percentage%'
+      supportedMode: '&8Supports generator: &6&l&o%tier_supported_mode%'
+  confirm:
+    cancel:
+      name: '&cCancel'
+      lore: '&8Click to cancel the purchase'
+    buy:
+      name: '&aBuy'
+      lore: '&8Click to confirm the purchase'
+  upgrade:
+    title: '&6&lChoose a tier to upgrade'
+    lore:
+      upgrade: '&aClick to upgrade'
+  admin:
+    title: '&4&lCCG: &cAdmin'
+    reload:
+      title: '&6&lReload config'
+      lore:
+      - '&8Reloads all files'
+      - '&7- config.yml'
+      - '&7- lang.yml'
+      - '&7- data/players.yml'
+      - '&7- data/signs.yml'
+    forcesave:
+      title: '&6&lForce save'
+      lore:
+      - '&8Forces the server to save player files'
+      - '&7- data/players.yml'
+      - '&r'
+      - '&cUseful for big changes in player data'
+    forcebuy:
+      title: '&6&lForce buy'
+      lore:
+      - '&8Forces a player to buy a tier'
+      - '&r '
+      - '&cThe player will pay for the tier'
+      - '&ceven if they can''t afford it!'
+    givetier:
+      title: '&6&lGive tier'
+      lore:
+      - '&8Gives a player a tier'
+      - '&r '
+      - '&cThe player will get the tier for free'
+    settier:
+      title: '&6&lSet tier'
+      lore:
+      - '&8Sets the current tier for a player'
+      - '&r '
+      - '&cThis will not purchase a tier'
+    withdraw:
+      title: '&6&lWithdraw tier from player'
+      lore:
+      - '&8Withdraws a purchased tier from a player'
+      - '&r '
+      - '&cAlso deselects tier if selected'
+      select: '&aClick to withdraw tier'
+    createtier:
+      title: '&6&lCreate a new tier'
+      lore:
+      - '&8Create a new tier with a GUI'
+    no-permission:
+      title: '&4&lNo permission'
+      lore: '&cYou do not have the %s1 permission'
+  select:
+    player-select-skull:
+      title: '&e&l%player_name%'
+      lore:
+      - '&aClick to select %player_name%'
+    title: '&4&lCCG: &cSelect a player'
+    next-page:
+      title: '&a&lNext page'
+      lore:
+      - '&8Click to go the next page'
+      last-page:
+        title: '&a&lNext page'
+        lore:
+        - '&8You are on the last page'
+    previous-page:
+      title: '&a&lPrevious page'
+      lore:
+      - '&8Click to go the previous page'
+      first-page:
+        title: '&a&lPrevious page'
+        lore:
+        - '&8You are on the first page'
+    tier:
+      already-selected: '&4&lTier currently selected'
+      already-own: '&4&lTier already own'
+      title: '&4&lCCG: &cSelect a tier'
+  close:
+    title: '&4&lClose'
+    lore:
+    - '&cClick to close the inventory'
+  create:
+    title: '&4&lCCG: &cCreating a tier'
+    info:
+      required: '&c**REQUIRED**'
+      emptyList: '&aNone'
+    class:
+      title: '&6&lTier class'
+      lore:
+      - '&8Define the tier class'
+      - '&r'
+      - '&7Current: &a%s1'
+    level:
+      title: '&6&lTier level'
+      lore:
+      - '&8Define the tier level'
+      - '&r'
+      - '&7Current: &a%s1'
+    icon:
+      title: '&6&lTier icon'
+      lore:
+      - '&8Define the tier icon material'
+      - '&r'
+      - '&7Current: &a%s1'
+    name:
+      title: '&6&lTier name'
+      lore:
+      - '&8Define the tier displayname'
+      - '&r'
+      - '&7Current: &a%s1'
+    results:
+      title: '&6&lTier results'
+      lore:
+      - '&8Define the results of the tier'
+      - '&r'
+      - '&7Current:'
+    requirements:
+      title: '&6&lTier requirements'
+      lore:
+      - '&8Define the requirements for the tier'
+      - '&r'
+      - '&7Currently &a%s1&7 requrirements in use'
+    description:
+      title: '&6&lTier description'
+      lore:
+      - '&8Define the description of the tier'
+      - '&cWill replace displayed results in the GUI'
+      - '&r'
+      - '&7Current:'
+no-tiers-defined: '&cThere are no tiers defined in the config'
+money-format: '###,###,###,###,###.##'
+tier-changed: You have now selected the %tier_name% tier
+tier-changed-team: '%player_name% changed the islands selected tier to %tier_name%'
+tier-purchased: You have now purchased the %tier_name% tier
+tier-purchased-team: '%player_name% purchased the tier %tier_name% for the island'
+tier-upgraded-team: '%player_name% upgraded the selected tier'
+player-already-owns-tier: The player already owns this tier
+player-does-not-own-tier: The player does not own this tier
+tier-unselected-success:
+  self: '&aTier unselected for player'
+  other: '&cYour currently selected tier has been unselected by an admin'
+tier-unpurchased-success:
+  self: '&aTier withdrawen from player'
+  other: '&cA tier owned by you has been withdrawen by an admin'
+tier-given: Tier has been given to the player
+tier-gotten: You have unlocked a new tier
+tier-not-purchased: '&cYou have not purchased this tier yet'
+tier-not-locked: '&cThis tier is locked. Buy the previous tier first.'
+tier-not-found: '&cTier not found'
+tier-cant-afford: '&cYou can not afford this tier'
+no-upgrades-available: '&aYou do not have any upgrades available'
+upgrade-not-purchasable: '&cYou do not fulfill the requirements to upgrade:'
+upgrade-not-purchasable-money: '&cYou need %tier_price_money%$ to buy the tier'
+upgrade-not-purchasable-xp: '&cYou need %tier_price_xp% XP to buy the tier'
+upgrade-not-purchasable-level: '&cYou need a island level of atleast %tier_price_level%
+  to buy the tier'
+upgrade-not-purchasable-items: '&cYou need %tier_price_items% to buy this tier'
+force-purchased: You have now force bought %selected_tier_name% for %player_name%
+admin-command-usage: '&cUsage: /%command% [reload, forcesave, settier, givetier, forcebuy,
+  withdraw]'
+chatinput:
+  invalid:
+    default: '&4%s1 &cis a invalid input'
+    no-space: '&cSpaces are not allowed'
+    no-number: '&4%s1&c is not a valid number!'
+    unknown-material: '&4%s1&c is not a valid material!'
+  info:
+    class:
+    - '&7Editing tier &aclass'
+    - '&7Write the tier &aclass&7 in chat'
+    - '&cSpaces are not allowed'
+    icon:
+    - '&7Editing tier &aicon'
+    - '&7Write the tier &aicon material name&7 in chat'
+    - '&cUse Bukkit material names!'
+    level:
+    - '&7Editing tier &alevel'
+    - '&7Write the tier &alevel&7 in chat'
+    - '&cPositive numbers or zero only!'
+    name:
+    - '&7Editing tier &aname'
+    - '&7Write the tier &aname&7 in chat'
+    - '&cSpaces and colors are allowed!'
+    description:
+    - '&7Editing tier &adescription'
+    - '&7Write the tier &adescription&7 in chat'
+    - '&7Write &a%s1&7 for new line '
+    - '&cSpaces and colors are allowed!'
+    - '&cWrite &4&l"%s2"&c to delete description'
+    CANCEL: '&cWrite &4&l"%s1" &c to cancel'
+    results:
+      material:
+      - '&7Editing result &amaterial'
+      - '&7Write the result &amaterial name'
+      - '&cUse Bukkit material names!'
+signs:
+  GUI:
+    '0': '&3CustomCobbleGen'
+    '1': ' '
+    '2': '&lClick to open'
+    '3': '&lthe GUI'
+  select:
+    '0': '&3CustomCobbleGen'
+    '1': ' '
+    '2': '&lClick to select'
+    '3': '&a&l%tier_name%'
+  buy:
+    '0': '&3CustomCobbleGen'
+    '1': ''
+    '2': '&lClick to buy'
+    '3': '&a&l%tier_name%'
+  not-valid:
+    '0': '&3CustomCobbleGen'
+    '1': ''
+    '2': '&cNot a valid sign'
+    '3': ''
+  no-permission:
+    '0': '&3CustomCobbleGen'
+    '1': '&cYou do not have'
+    '2': '&cpermissions to'
+    '3': '&ccreate this sign'
+  success: Successfully created a clickable sign
+  deleted: '&cSign deleted'
+placeholders:
+  response:
+    owned: owned
+    not-owned: not owned
+placeholder:
+  response:
+    all: ALL

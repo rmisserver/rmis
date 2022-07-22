@@ -1,0 +1,83 @@
+# CustomCobbleGen! Version: 1.4.5 By Phil14052
+# IMPORTANT: ONLY EDIT THIS IF YOU KNOW WHAT YOU ARE DOING!!
+players:
+  0a40c26b-d84f-3165-8149-9006d4b04647:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  1c935340-bc1b-317d-804d-cae76ccb6dee:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  3f4621b5-1475-36c0-80a9-20d080e2b305:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  90dc5848-34c8-3b6d-a374-dd426ee86e55:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  e3d149e5-1fdb-39a1-ac49-ab784614bb93:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  4d2443e1-43c6-3010-84c1-71887d5fcbf4:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  5daf8e2e-4c0c-3779-9761-ae5015c29a02:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  6d7a04f7-fb1e-3fef-8c38-5ed13c340c9a:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  43d2ca21-1255-341a-9cb2-5d8e03199170:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
+  3f0a58fb-910c-3cba-87d8-e522c69bfffe:
+    selected:
+      '0':
+        class: DEFAULT
+        level: 0
+    purchased:
+      DEFAULT:
+      - 0
